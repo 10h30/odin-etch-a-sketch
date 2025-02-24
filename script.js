@@ -3,7 +3,7 @@ const containerWidth = document.querySelector(".container").clientWidth;
 console.log(containerWidth)
 
 const button = document.querySelector("button")
-let size = 0
+let size = 16
 button.addEventListener('click', () => {
     do {
         let gridSize = prompt("Please enter grid size: ") 
@@ -36,7 +36,7 @@ function makeGrid(size) {
 }  
 
 }
-makeGrid(16)
+makeGrid(size)
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
