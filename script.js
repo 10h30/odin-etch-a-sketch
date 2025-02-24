@@ -3,10 +3,18 @@ const containerWidth = document.querySelector(".container").clientWidth;
 console.log(containerWidth)
 
 const button = document.querySelector("button")
+let size = 0
 button.addEventListener('click', () => {
-
-    let gridSize = prompt("Please enter grid size: ")  
-    makeGrid(gridSize)
+    do {
+        let gridSize = prompt("Please enter grid size: ") 
+        size = gridSize
+        console.log(size)
+        if (size > 100) {
+            alert("Please enter number smaller than 100")
+        }
+    }
+    while (size > 100);   
+    makeGrid(size)
 }
 )
 
